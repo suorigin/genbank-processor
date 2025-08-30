@@ -1,0 +1,59 @@
+1. Camellia sinensis isolate DASZ chloroplast, complete genome
+156,706 bp circular DNA 
+PP988495.1 GI:3032659007
+
+2. Camellia sinensis isolate rz-jblq5sz cultivar Wuyuanlvcha chloroplast, complete genome
+157,080 bp circular DNA 
+PV915199.1 GI:3025155832
+
+3. Camellia sinensis isolate ro-jblpw90 cultivar Wuniuzaocha chloroplast, complete genome
+157,112 bp circular DNA 
+PV915198.1 GI:3025155741
+
+4. Camellia sinensis isolate r9-jblptex cultivar Lushanyunwu chloroplast, complete genome
+157,103 bp circular DNA 
+PV915197.1 GI:3025155651
+
+5. Camellia sinensis isolate 27-jceb4xp cultivar Gougunao chloroplast, complete genome
+157,099 bp circular DNA 
+PV915196.1 GI:3025155560
+
+6. Camellia sinensis cultivar Shunhuangshanwildtea3 chloroplast, complete genome
+157,062 bp circular DNA 
+PQ510299.1 GI:2997149118
+
+7. Camellia sinensis cultivar Shunhuangshanwildtea4 chloroplast, complete genome
+157,065 bp circular DNA 
+PQ510298.1 GI:2997149028
+
+8. Camellia sinensis cultivar Shunhuangshanwildtea3 chloroplast, complete genome
+157,062 bp circular DNA 
+PQ510297.1 GI:2997148938
+
+9. Camellia sinensis cultivar Shunhuangshanwildtea2 chloroplast, complete genome
+157,023 bp circular DNA 
+PQ510296.1 GI:2997148848
+
+10. Camellia sinensis cultivar Shunhuangshanwildtea1 chloroplast, complete genome
+157,022 bp circular DNA 
+PQ510295.1 GI:2997148758
+
+11. Camellia sinensis cultivar Gulonggrouptea1 chloroplast, complete genome
+157,086 bp circular DNA 
+PQ510294.1 GI:2997148668
+
+12. Camellia sinensis cultivar Guidingcha1 chloroplast, complete genome
+156,697 bp circular DNA 
+PQ510293.1 GI:2997148578
+
+13. Camellia sinensis isolate Hayrat maturase K (matK) gene, partial cds; chloroplast
+738 bp linear DNA 
+PV699647.1 GI:2989639629
+
+14. Camellia sinensis isolate Hamzabey maturase K (matK) gene, partial cds; chloroplast
+738 bp linear DNA 
+PV699646.1 GI:2989639627
+
+15. Camellia sinensis isolate Tuglali_10 maturase K (matK) gene, partial cds; chloroplast
+738 bp linear DNA 
+PV699645.1 GI:2989639625

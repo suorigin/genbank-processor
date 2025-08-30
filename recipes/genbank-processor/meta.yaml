@@ -1,0 +1,44 @@
+{% set name = "genbank-processor" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/yourusername/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 您需要计算源码包的SHA256值
+
+build:
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - requests
+
+test:
+  commands:
+    - genbank-processor --help
+    - genbank-processor -h en --help
+    - genbank-processor -h zh --help
+  imports:
+    - genbank_processor
+
+about:
+  home: https://github.com/yourusername/genbank-processor
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "A tool for processing, filtering and downloading genomic data from NCBI"
+  doc_url: https://github.com/yourusername/genbank-processor
+  dev_url: https://github.com/yourusername/genbank-processor
+
+extra:
+  recipe-maintainers:
+    - your-github-username
