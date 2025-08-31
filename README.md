@@ -21,11 +21,6 @@ A comprehensive command-line tool for processing, filtering, and downloading org
 - `Python` 3.8 or higher
 - `requests` library
 
-### Using pip
-```bash
-pip install genbank-processor
-```
-
 ### From source
 ```bash
 git clone https://github.com/yourusername/genbank-processor.git
