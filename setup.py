@@ -27,7 +27,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
     ],
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=requirements,
     entry_points={
         "console_scripts": [
@@ -36,3 +36,4 @@ setup(
     },
     include_package_data=True,
 )
+
