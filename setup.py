@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/genbank-processor",
-    packages=find_packages(),
+    packages=find_packages(include=['genbank_processor', 'genbank_processor.*']),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
