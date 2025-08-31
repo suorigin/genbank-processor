@@ -27,7 +27,7 @@ setup(
         "Programming Language :: Python :: 3.10", 
         "Topic :: Scientific/Engineering :: Bio-Informatics",
     ],
-    python_requires=">=3.8",  # 与您的测试矩阵保持一致
+    python_requires=">=3.8",
     install_requires=requirements,
     entry_points={
         "console_scripts": [
@@ -36,3 +36,4 @@ setup(
     },
     include_package_data=True,
 )
+
