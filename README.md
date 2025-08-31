@@ -32,7 +32,7 @@ git clone https://github.com/yourusername/genbank-processor.git
 cd genbank-processor
 pip install .
 # or
-python setup.y install
+python setup.py install
 ```
 
 ## Usage
