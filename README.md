@@ -1,81 +1,37 @@
-\# GenBank Processor
+GenBank Processor
+A comprehensive command-line tool for processing, filtering, and downloading organelle genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete organelle genome data.
 
+Features
+1.Filtering: Extract complete genome records from raw data files
+2.Conversion: Transform filtered data into TSV format for easy analysis
+3.Download: Batch download GenBank files using accession numbers
+4.Pipeline: Complete workflow from raw data to downloaded GenBank files
+5.Multilingual Support: Help documentation available in English and Chinese
 
+Installation
+Clone Github folder：
+git clone https://github.com/suorigin/genbank-processor.git
+cd genbank-processor
+python setup.py install
 
-A comprehensive command-line tool for processing, filtering, and downloading genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete genome data.
+Prerequisites
+`Python` 3.8 or higher
+`requests` library
 
-
-
-\## Features
-
-
-
-\- \*\*Filtering\*\*: Extract complete genome records from raw data files
-
-\- \*\*Conversion\*\*: Transform filtered data into TSV format for easy analysis
-
-\- \*\*Download\*\*: Batch download GenBank files using accession numbers
-
-\- \*\*Pipeline\*\*: Complete workflow from raw data to downloaded GenBank files
-
-\- \*\*Multilingual Support\*\*: Help documentation available in English and Chinese
-
-
-
-\## Installation
-
-
-
-\### Prerequisites
-
-
-
-\- Python 3.7 or higher
-
-\- `requests` library
-
-
-
-\### Using pip
-
-
-
-```bash
-
+Using pip
+#bash
 pip install genbank-processor
 
-```
-
-
-
-\### From source
-
-
-
-```bash
-
+From source
+#bash
 git clone https://github.com/yourusername/genbank-processor.git
-
 cd genbank-processor
-
 pip install .
+or python setup.py install
 
-```
-
-
-
-\## Usage
-
-
-
+Usage
 GenBank Processor provides several subcommands for different processing tasks:
-
-
-
-\### Filter complete genomes
-
-
-
+Filter complete genomes list
 ```bash
 
 genbank-processor filter -i input.txt -o filtered.txt
