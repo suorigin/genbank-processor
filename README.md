@@ -225,9 +225,9 @@ The tool includes robust error handling with:
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-For more information, you can follow the user:(https://www.zhihu.com/people/su-dian-dian-87-36)
-Author’s email: [1436636379@qq.com]
+- Contributions are welcome! Please feel free to submit a Pull Request.
+- For more information, you can follow the user:(https://www.zhihu.com/people/su-dian-dian-87-36)
+- Author’s email: [1436636379@qq.com]
 
 ## License
 
