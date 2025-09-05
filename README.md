@@ -1,13 +1,11 @@
 # GenBank Processor
 
-A comprehensive command-line tool for processing, filtering, downloading, and renaming organelle genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete  organelle genome data.
+A comprehensive command-line tool for processing, filtering, and downloading organelle genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete  organelle genome data.
 
 ## Dependencies
 
 - Python 3.8+
 - requests >= 2.25.0
-- biopython >= 1.79
-- pandas >= 1.3.0
 
 ## Features
 
@@ -15,17 +13,13 @@ A comprehensive command-line tool for processing, filtering, downloading, and re
 - **Conversion**: Transform filtered data into TSV format for easy analysis
 - **Download**: Batch download GenBank files using accession numbers
 - **Pipeline**: Complete workflow from raw data to downloaded GenBank files
-- **Rename gbfiles**: Rename GenBank files based on a mapping table
-- **Extractcp**: Extract chloroplast genome sequences and rename them
-- **Extract Gene**: Extract CDS and protein sequences from GenBank files
-- **Simplify ID**: Simplify FASTA sequence IDs to gene_short_accession format
 - **Multilingual Support**: Help documentation available in English and Chinese
 
 ## Installation
 ### Prerequisites
 
 - `Python` 3.8 or higher
-- `requests`, `biopython`, and `pandas` libraries
+- `requests` library
 
 ### From source
 ```bash
@@ -62,30 +56,6 @@ genbank-processor download -i genomes.tsv -o downloads/ --delay 1.5 --retries 5
 
 ```bash
 genbank-processor pipeline -i raw_data.txt -t genomes.tsv -o downloads/ --delay 1.0 --retries 3
-```
-
-### Rename GenBank files
-
-```bash
-genbank-processor renamegbfiles -i gb_files -r replace.txt -o renamed_files
-```
-
-### Extract chloroplast sequences
-
-```bash
-genbank-processor extractcp -i gb_files -o chloroplast_sequences -r replace.txt
-```
-
-### Extract CDS and protein sequences
-
-```bash
-genbank-processor extract_gene -i gb_files -o gene_sequences -t both
-```
-
-### Simplify sequence IDs
-
-```bash
-genbank-processor simplify_id -i gene_sequences -o simplified_sequences
 ```
 
 ## Command Reference
@@ -130,58 +100,6 @@ genbank-processor download -i INPUT -o OUTPUT [--delay DELAY] [--retries RETRIES
 - `--delay`: Delay between requests in seconds (default: 1.0)
 - `--retries`: Number of retry attempts for failed downloads (default: 3)
 
-### Renamegbfiles Command
-
-Renames GenBank files based on a mapping table.
-
-```
-genbank-processor renamegbfiles -i INPUT -r REPLACE -o OUTPUT
-```
-
-- `-i, --input`: Input directory containing GB files (required)
-- `-r, --replace`: Mapping table file path (TSV format) (required)
-- `-o, --output`: Output directory path (required)
-
-### Extractcp Command
-
-Extracts chloroplast genome sequences from GenBank files and optionally renames them.
-
-```
-genbank-processor extractcp -i INPUT -o OUTPUT [-r REPLACE]
-```
-
-- `-i, --input`: Input directory containing GB files (required)
-- `-o, --output`: Output directory path (required)
-- `-r, --replace`: Mapping table file path (TSV format) (optional)
-
-### Extract Gene Command
-
-Extracts CDS and/or protein sequences from GenBank files.
-
-```
-genbank-processor extract_gene -i INPUT -o OUTPUT [-t TYPE] [-r RENAME]
-```
-
-- `-i, --input`: Input directory containing GB files (required)
-- `-o, --output`: Output directory path (required)
-- `-t, --type`: Extraction type: cds, protein, or both (default: both)
-- `-r, --rename`: Mapping table file path for renaming output files (optional)
-
-### Simplify ID Command
-
-Simplifies FASTA sequence IDs to gene_short_accession format.
-
-```
-genbank-processor simplify_id -i INPUT_DIR -o OUTPUT_DIR
-# or
-genbank-processor simplify_id -I INPUT_FILE -O OUTPUT_FILE
-```
-
-- `-i, --input-dir`: Input directory containing FASTA files
-- `-o, --output-dir`: Output directory path
-- `-I, --input-file`: Input FASTA file path
-- `-O, --output-file`: Output FASTA file path
-
 ### Pipeline Command
 
 Runs the complete processing pipeline: filter → convert → download.
@@ -219,16 +137,6 @@ Sequence information for Mus musculus
 NC_000067.6 GI:XXXXXXXX
 ```
 
-The renamegbfiles and extractcp commands require a mapping table in TSV format with two columns:
-
-Example:
-```
-Accession	Name
-PP988495.1	DASZ
-PV915199.1	WYLC
-PQ510294.1	GL
-```
-
 ## Output Format
 
 ### Filter Output
@@ -245,22 +153,6 @@ The convert command produces a TSV file with the following columns:
 ### Download Output
 
 The download command saves individual GenBank files (.gb format) named by their accession numbers in the specified output directory.
-
-### Renamegbfiles Output
-
-The renamegbfiles command saves renamed GenBank files in the specified output directory, using the names from the mapping table.
-
-### Extractcp Output
-
-The extractcp command saves FASTA files containing chloroplast genome sequences, optionally renamed according to the mapping table.
-
-### Extract Gene Output
-
-The extract_gene command saves FASTA files containing CDS and/or protein sequences, with file names following the pattern `{accession}_{type}.fasta` (e.g., `PP988495.1_cds.fasta`).
-
-### Simplify ID Output
-
-The simplify_id command saves FASTA files with simplified sequence IDs in the format `gene_short.accession` (e.g., `rps12.1_PP988495.1`).
 
 ## Multilingual Support
 
@@ -298,18 +190,6 @@ genbank-processor convert -i complete_genomes.txt -o genomes.tsv
 
 # Download GenBank files
 genbank-processor download -i genomes.tsv -o gb_files/ --delay 2.0
-
-# Rename GenBank files
-genbank-processor renamegbfiles -i gb_files/ -r replace.txt -o renamed_files/
-
-# Extract chloroplast sequences
-genbank-processor extractcp -i gb_files/ -o chloroplast_sequences/ -r replace.txt
-
-# Extract CDS and protein sequences
-genbank-processor extract_gene -i gb_files/ -o gene_sequences/ -t both
-
-# Simplify sequence IDs
-genbank-processor simplify_id -i gene_sequences/ -o simplified_sequences/
 ```
 
 ### Complete Pipeline
@@ -337,11 +217,12 @@ The tool includes robust error handling with:
 - Clear error messages for common issues
 - Proper cleanup on interruption (Ctrl+C)
 
+
 ## Contributing
 
 - Contributions are welcome! Please feel free to submit a Pull Request.
 - For more information, you can follow the user:(https://www.zhihu.com/people/su-dian-dian-87-36)
-- Author's email: [1436636379@qq.com]
+- Author’s email: [1436636379@qq.com]
 
 ## License
 
@@ -359,4 +240,3 @@ If you encounter any issues or have questions, please open an issue on the GitHu
 ---
 
 *GenBank Processor - Streamlining genomic data processing for researchers*
-```

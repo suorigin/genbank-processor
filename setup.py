@@ -8,10 +8,10 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="genbank-processor",
-    version="1.2.0",  # 更新版本号
+    version="1.0.0",
     author="Your Name",
     author_email="your.email@example.com",
-    description="A comprehensive tool for processing genomic data from NCBI with CDS/protein extraction capabilities",
+    description="A tool for processing, filtering and downloading genomic data from NCBI",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/genbank-processor",
