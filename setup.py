@@ -9,8 +9,8 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="genbank-processor",
     version="1.2.0",  # 更新版本号
-    author="suorigin",
-    author_email="1436636379@qq.com",
+    author="Your Name",
+    author_email="your.email@example.com",
     description="A comprehensive tool for processing genomic data from NCBI with CDS/protein extraction capabilities",
     long_description=long_description,
     long_description_content_type="text/markdown",
