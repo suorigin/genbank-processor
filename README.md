@@ -1,6 +1,6 @@
 # GenBank Processor
 
-A comprehensive command-line tool for processing, filtering, downloading, and renaming organelle genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete  organelle genome data.
+A comprehensive command-line tool for processing, filtering, downloading, extracting and renaming organelle genomic data from NCBI GenBank. This tool provides a streamlined workflow for researchers working with complete  organelle genome data.
 
 ## Dependencies
 
